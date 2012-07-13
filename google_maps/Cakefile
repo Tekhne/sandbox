@@ -1,0 +1,11 @@
+{exec} = require 'child_process'
+
+task 'compile', 'Compile *.coffee files to *.js', ->
+  exec 'coffee --bare --compile *.coffee', (err, stdout, stderr) ->
+    throw err if err
+    console.log stdout + stderr
+
+task 'clean', 'Remove all JavaScript files', (options) ->
+  exec 'rm *.js', (err, stdout, stderr) ->
+    throw err if err
+    console.log stdout + stderr
