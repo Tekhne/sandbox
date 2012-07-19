@@ -25,20 +25,20 @@ class window.demo.maps._Maps
     $('body').append script
 
   # Must be static and take no arguments (cross-domain callback).
-  @initialize: ->
+  @initialize: =>
     @geocoder = new google.maps.Geocoder()
     for record in @mapRecords
       buildMap record
       buildMapMarkers record
       setMapCenter record
 
-  buildMap = (record) ->
+  buildMap = (record) =>
     record.map = new google.maps.Map($(record.elementID).get(0), {
-      zoom: record.zoom or defaultZoom
+      zoom: record.zoom ? defaultZoom
       mapTypeId: google.maps.MapTypeId.ROADMAP
     })
 
-  buildMapMarkers = (record) ->
+  buildMapMarkers = (record) =>
     record.markers = []
     for address in record.addresses
       @geocoder.geocode({address: address}, (results, status) ->
@@ -49,7 +49,7 @@ class window.demo.maps._Maps
           })
       )
 
-  setMapCenter = (record) ->
+  setMapCenter = (record) =>
     # record.map.setCenter(new google.maps.LatLng(...))
 
 $ ->
