@@ -10,7 +10,7 @@ class window.demo.maps.Maps
 
   # Must be a class/static method.
   @instance: (mapRecords) ->
-    instance ?= new window.demo.maps._Maps mapRecords
+    instance ?= new window.demo.maps._Maps(mapRecords)
 
 class window.demo.maps._Maps
   constructor: (records) ->
