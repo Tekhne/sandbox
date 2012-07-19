@@ -1,5 +1,5 @@
-window.demo = demo or {}
-window.demo.maps = window.demo.maps or {}
+window.demo ?= {}
+window.demo.maps ?= {}
 
 window.demo.maps.API_KEY = 'AIzaSyCnHEfrA5ra6H6SySHr3OFF-OJ-FFRK0ug'
 window.demo.maps.API_VERSION = '3.9'
