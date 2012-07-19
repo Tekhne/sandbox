@@ -1,1 +1,1 @@
-This project hold demos for various technologies.
+This project holds demos for various technologies.
