@@ -58,3 +58,11 @@ class Edit extends Spine.Controller
 
   delete: ->
     @item.destroy() if confirm('Are you sure?')
+
+
+class Main extends Spine.Stack
+  controllers:
+    show: Show
+    edit: Edit
+
+module.exports = Main
