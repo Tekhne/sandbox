@@ -1,10 +1,14 @@
 require('lib/setup')
 
-Spine = require('spine')
+Spine    = require('spine')
+Contacts = require('controllers/contacts')
 
 class App extends Spine.Controller
   constructor: ->
     super
-    @log "Initialized"
+    @contacts = new Contacts
+    @append @contacts
+
+    Spine.Route.setup()
 
 module.exports = App
