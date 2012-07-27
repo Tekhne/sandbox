@@ -8,4 +8,3 @@ class App extends Spine.Controller
     @log "Initialized"
 
 module.exports = App
-
