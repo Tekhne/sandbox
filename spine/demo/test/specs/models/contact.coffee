@@ -4,4 +4,3 @@ describe 'Contact', ->
   Contact = require('models/contact')
 
   it 'can noop', ->
-    
