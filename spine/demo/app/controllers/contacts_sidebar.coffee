@@ -16,10 +16,10 @@ class Sidebar extends Spine.Controller
 
   constructor: ->
     super
-    # Render initial view
+    # Render initial view.
     @html require('views/sidebar')()
 
-    # Setup a Spine List
+    # Setup a Spine List.
     @list = new List
       el: @items,
       template: require('views/item'),
