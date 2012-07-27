@@ -2,7 +2,6 @@ Spine   = require('spine')
 Contact = require('models/contact')
 $       = Spine.$
 
-
 class Show extends Spine.Controller
   # Set the HTML class.
   className: 'show'
@@ -27,7 +26,6 @@ class Show extends Spine.Controller
   edit: ->
     # Navigate to the 'edit' view whenever the edit link is clicked.
     @navigate('/contacts', @item.id, 'edit')
-
 
 class Edit extends Spine.Controller
   className: 'edit'
@@ -58,7 +56,6 @@ class Edit extends Spine.Controller
 
   delete: ->
     @item.destroy() if confirm('Are you sure?')
-
 
 class Main extends Spine.Stack
   controllers:
