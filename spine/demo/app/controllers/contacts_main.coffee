@@ -12,13 +12,11 @@ class Show extends Spine.Controller
   constructor: ->
     super
 
-    # Bind the change() callback
-    # to the *active* event
+    # Bind the change() callback to the *active* event
     @active @change
 
   render: ->
-    # Render a template, replacing the 
-    # controller's HTML
+    # Render a template, replacing the controller's HTML
     @html require('views/show')(@item)
 
   change: (params) =>
@@ -26,6 +24,5 @@ class Show extends Spine.Controller
     @render()
 
   edit: ->
-    # Navigate to the 'edit' view whenever
-    # the edit link is clicked
+    # Navigate to the 'edit' view whenever the edit link is clicked
     @navigate('/contacts', @item.id, 'edit')
