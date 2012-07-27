@@ -2,6 +2,7 @@ Spine   = require('spine')
 Contact = require('models/contact')
 $       = Spine.$
 
+
 class Show extends Spine.Controller
   # Set the HTML class.
   className: 'show'
