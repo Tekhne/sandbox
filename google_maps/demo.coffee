@@ -3,9 +3,11 @@ window.demo.maps ?= {}
 
 window.demo.maps.API_KEY = 'AIzaSyCnHEfrA5ra6H6SySHr3OFF-OJ-FFRK0ug'
 window.demo.maps.API_VERSION = '3.9'
+window.demo.maps.records = []
+window.demo.maps.defaultZoom = 8
 
 class window.demo.maps.Maps
-  # Define at this level to force the closure on the class.
+  # Define at this level to force a closure on the class.
   instance = undefined
 
   # Must be a class/static method.
@@ -14,10 +16,9 @@ class window.demo.maps.Maps
 
 class window.demo.maps._Maps
   constructor: (records) ->
-    @defaultZoom = 8
     @geocoder = undefined
-    @records = records
-    @scriptURL = 'http://maps.googleapis.com/maps/api/js?v=' + API_VERSION + '&key=' + API_KEY + '&sensor=false'
+    window.demo.maps.records = records
+    @scriptURL = 'http://maps.googleapis.com/maps/api/js?v=' + window.demo.maps.API_VERSION + '&key=' + window.demo.maps.API_KEY + '&sensor=false'
 
   render: ->
     script = $('<script type="text/javascript"></script>')
@@ -27,14 +28,14 @@ class window.demo.maps._Maps
   # Must be static and take no arguments (cross-domain callback).
   @initialize: =>
     @geocoder = new google.maps.Geocoder()
-    for record in @mapRecords
+    for record in window.demo.maps.records
       buildMap record
       buildMapMarkers record
       setMapCenter record
 
   buildMap = (record) =>
     record.map = new google.maps.Map($(record.elementID).get(0), {
-      zoom: record.zoom ? defaultZoom
+      zoom: record.zoom ? window.demo.maps.defaultZoom
       mapTypeId: google.maps.MapTypeId.ROADMAP
     })
 
