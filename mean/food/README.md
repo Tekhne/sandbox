@@ -2,7 +2,7 @@
 
 ## Description
 
-Manage food in your life.
+Manage food (recipes, menus, shopping lists).
 
 ## Project Status
 
