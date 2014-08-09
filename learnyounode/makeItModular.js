@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var filterDir = require("./filterDir");
+var filterDir = require("./lib/filterDir");
 var directory = process.argv[2];
 var extension = process.argv[3];
 
