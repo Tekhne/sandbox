@@ -1,0 +1,8 @@
+{
+  "name": "nodeschool",
+  "description": "Solutions to exerices on http://nodeschool.io",
+  "version": "0.0.1",
+  "dependencies": {
+    "strftime": "^0.8.2"
+  }
+}
