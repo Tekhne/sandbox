@@ -1,0 +1,9 @@
+{
+  "name": "stream-adventure",
+  "description": "Solutions to exerices on http://nodeschool.io",
+  "version": "0.0.1",
+  "dependencies": {
+    "split": "^0.3.0",
+    "through": "^2.3.4"
+  }
+}
