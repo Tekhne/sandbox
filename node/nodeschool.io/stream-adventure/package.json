@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "concat-stream": "^1.4.6",
+    "request": "^2.40.0",
     "split": "^0.3.0",
     "through": "^2.3.4"
   }
