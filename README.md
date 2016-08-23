@@ -1,2 +1,1 @@
-This project holds demos and acts as a playground for exploring for various
-technologies.
+This project acts as a playground for exploring various technologies.
